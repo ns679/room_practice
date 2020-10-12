@@ -1,5 +1,6 @@
 package com.example.room_practice
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -19,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewAdapter = RecyclerAdapter(this)
+        val a = resources.getStringArray(R.array.a).toMutableList()
+
+        viewAdapter = RecyclerAdapter(a)
         viewHolder = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
 
         recyclerView = findViewById<RecyclerView>(R.id.recyclerview).apply {
