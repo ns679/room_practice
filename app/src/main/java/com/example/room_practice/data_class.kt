@@ -1,4 +1,4 @@
-package com.example.room_practice.Dataclass
+package com.example.room_practice
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -11,7 +11,7 @@ import androidx.room.*
         fun getAlphabetizedWords():LiveData<List<Word>>
 
         @Insert(onConflict = OnConflictStrategy.IGNORE)
-        suspend fun insert(word:Word)
+        suspend fun insert(word: Word)
 
         @Query("DELETE FROM word_table")
         suspend fun deleteAll()

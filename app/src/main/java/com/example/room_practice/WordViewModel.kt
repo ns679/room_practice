@@ -1,4 +1,4 @@
-package com.example.room_practice.Dataclass
+package com.example.room_practice
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class WordViewModel(application: Application):AndroidViewModel(application) {
 
-    private val repository:WordRepositry
+    private val repository: WordRepositry
     val allWords:LiveData<List<Word>>
 
     init {
