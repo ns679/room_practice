@@ -52,7 +52,5 @@ abstract class WordRoomDatabase:RoomDatabase(){
                 instance
             }
         }
-
-
     }
 }

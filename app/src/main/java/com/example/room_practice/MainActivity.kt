@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         wordViewModel = ViewModelProvider(this).get(WordViewModel::class.java)
         wordViewModel.allWords.observe(this, Observer { words -> words?.let {
-            adapter.setWords(it) }
+            adapter.setWords(it)
+            }
         })
 
 
