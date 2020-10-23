@@ -52,5 +52,10 @@ abstract class WordRoomDatabase:RoomDatabase(){
                 instance
             }
         }
+
+        fun getDatabase(application: Application): WordRoomDatabase {
+            TODO("Not yet implemented")
+        }
+
     }
 }
