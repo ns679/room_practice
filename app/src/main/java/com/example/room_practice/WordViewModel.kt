@@ -13,7 +13,7 @@ class WordViewModel(application: Application):AndroidViewModel(application) {
     val allWords:LiveData<List<Word>>
 
     init {
-        val wordsDao = WordRoomDatabase.getDatabase(application).wordDao()
+        val wordsDao = WordRoomDatabase.getDatabase(application,viewModelScope).wordDao()
         repository = WordRepositry(wordsDao)
         allWords = repository.allWords
     }
